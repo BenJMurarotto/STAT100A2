@@ -12,4 +12,16 @@ hist(Heptathlon$high_jump)
 
 
 ### If we assume there to be no difference then our h0 for this question is xbar1=xbar2 ###
-## Our hA there for is xbar1!=xbar2 
+## Our hA therefore is xbar1!=xbar2 
+t.test(Decathlon$high_jump, Heptathlon$high_jump)
+
+### The 95% CI for the two sample t-test to determine the difference in high jump performance is ###
+### 0.206 - 0.248 ###
+### our p value < 2.2e-16 which is < 0.05 therefore there is significant evidence to reject null ###
+### and assume that there is a difference in high jump performance between groups ###
+
+### Research Q2: is there a difference in shotput performance for Heptathlon athletes based on countries? ###
+mod.aov <- lm(Heptathlon$shotput~Heptathlon$country, data = Heptathlon)
+anova(mod.aov)
+
+### Here our 
