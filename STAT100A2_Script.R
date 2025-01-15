@@ -20,8 +20,11 @@ t.test(Decathlon$high_jump, Heptathlon$high_jump)
 ### our p value < 2.2e-16 which is < 0.05 therefore there is significant evidence to reject null ###
 ### and assume that there is a difference in high jump performance between groups ###
 
-### Research Q2: is there a difference in shotput performance for Heptathlon athletes based on countries? ###
+### Research Q2: Is there a difference in shotput performance for Heptathlon athletes based on countries? ###
 mod.aov <- lm(Heptathlon$shotput~Heptathlon$country, data = Heptathlon)
 anova(mod.aov)
 
-### Here our 
+### Here our F statistic is 1.83 and corresponding p-value of 0.146. This does not provide us strong enough evidence to reject 
+### the null hypothesis.
+
+## Research Q3: 
